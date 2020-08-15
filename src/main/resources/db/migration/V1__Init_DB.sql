@@ -36,7 +36,7 @@ create table user_role
 );
 create table users
 (
-    id         INTEGER PRIMARY KEY ,
+    id         INTEGER ,
     created    timestamp,
     status     VARCHAR(255),
     updated    timestamp,
