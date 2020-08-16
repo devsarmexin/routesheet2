@@ -1,18 +1,18 @@
 create sequence hibernate_sequence start 1 increment 1;
 create table route
 (
-    id                INTEGER PRIMARY KEY ,
+    id                BIGINT PRIMARY KEY ,
     created           timestamp,
     status            VARCHAR(255),
     updated           timestamp,
-    departure_point   VARCHAR(255),
-    destination_point VARCHAR(255),
-    distance          INTEGER,
-    route_sheet_id    INTEGER
+    departure_point   VARCHAR(2048),
+    destination_point VARCHAR(2048),
+    distance          SMALLINT,
+    route_sheet_id    BIGINT
 );
 create table route_sheet
 (
-    id               INTEGER PRIMARY KEY ,
+    id               BIGINT PRIMARY KEY ,
     created          timestamp,
     status           VARCHAR(255),
     updated          timestamp,
@@ -21,22 +21,22 @@ create table route_sheet
     distance         INTEGER,
     fuel_finish      FLOAT,
     fuel_start       FLOAT,
-    fueling          INTEGER,
+    fueling          SMALLINT,
     mileage_finish   INTEGER,
     mileage_start    INTEGER,
     saving           FLOAT,
     trip_date        date,
     waybill_number   INTEGER,
-    user_id          INTEGER
+    user_id          BIGINT
 );
 create table user_role
 (
-    user_id INTEGER,
+    user_id BIGINT,
     roles   varchar(255)
 );
 create table users
 (
-    id         INTEGER ,
+    id         BIGINT PRIMARY KEY ,
     created    timestamp,
     status     VARCHAR(255),
     updated    timestamp,

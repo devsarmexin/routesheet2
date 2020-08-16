@@ -3,7 +3,7 @@ package com.sepfort.routesheet2.service.impl;
 import com.sepfort.routesheet2.model.Role;
 import com.sepfort.routesheet2.model.Status;
 import com.sepfort.routesheet2.model.User;
-import com.sepfort.routesheet2.rest.UserRepo;
+import com.sepfort.routesheet2.repository.UserRepo;
 import com.sepfort.routesheet2.service.UserService;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
